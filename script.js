@@ -5,8 +5,11 @@ function getParameterByName(name, url) {
         results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+
+    // Replace underscores with spaces
+    return decodeURIComponent(results[2].replace(/\+/g, ' ')).replace(/_/g, ' ');
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Set the title, description, and link based on URL parameters
