@@ -1,17 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const link = getParameterByName('link');
-    const title = getParameterByName('title');
-    const description = getParameterByName('description');
-
-    if (title) {
-        document.querySelector('.card-title').textContent = title;
-    }
-
-    if (description) {
-        document.querySelector('.card-description').textContent = description;
-    }
-});
-
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
